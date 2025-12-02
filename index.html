@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SolarCycle AI - 24 Solar Terms Clock</title>
+    <!-- We keep Tailwind CDN for simplicity in this migration, though installing it via npm is better for production -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/dseg@0.46.0/css/dseg.min.css" rel="stylesheet">
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans:wght@400;600&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans:wght@400;600&family=Jersey+10&display=swap');
       body {
         font-family: 'Noto Sans', sans-serif;
       }
@@ -15,10 +16,11 @@
         font-family: 'Noto Serif SC', serif;
       }
       .font-lcd {
+        /* Using DSEG7 Classic for the center clock */
         font-family: 'DSEG7 Classic', sans-serif;
         font-style: normal;
       }
-      /* Custom scrollbar for better aesthetics */
+      /* Custom scrollbar */
       ::-webkit-scrollbar {
         width: 6px;
       }
@@ -36,15 +38,18 @@
   <script type="importmap">
 {
   "imports": {
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.6"
   }
 }
 </script>
 </head>
   <body class="bg-stone-50 text-stone-800 antialiased overflow-hidden">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
