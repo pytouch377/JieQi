@@ -1,0 +1,5 @@
+{
+  "name": "SolarCycle AI",
+  "description": "An interactive 24 Solar Terms (Jieqi) clock that visualizes the passage of the year in traditional Chinese culture, enhanced with AI-generated cultural insights and health advice.",
+  "requestFramePermissions": []
+}
